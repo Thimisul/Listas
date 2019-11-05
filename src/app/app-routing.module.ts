@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'lista2/ex4', loadChildren: './lista2/ex4/ex4.module#Ex4PageModule' },
   { path: 'lista3/ex1', loadChildren: './lista3/ex1/ex1.module#Ex1PageModule' },
   { path: 'lista3/modalAtividade', loadChildren: './lista3/modal-atividade/modal-atividade.module#ModalAtividadePageModule' },
-  { path: 'ex1', loadChildren: './lista4/ex1/ex1.module#Ex1PageModule' },
-  { path: 'modal-atividade', loadChildren: './lista4/modal-atividade/modal-atividade.module#ModalAtividadePageModule' }
+  { path: 'lista4/ex1', loadChildren: './lista4/ex1/ex1.module#Ex1PageModule' },
+  { path: 'lista4/modalAtividade', loadChildren: './lista4/modal-atividade/modal-atividade.module#ModalAtividadePageModule' }
 ];
 
 @NgModule({

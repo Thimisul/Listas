@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="close()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>modalAtividade</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item>
+          <ion-label  >ID </ion-label>
+          <ion-input readonly="true" [(ngModel)]="atividade.id"></ion-input>
+      </ion-item>
+  
+      <ion-list>
+        <ion-radio-group [(ngModel)]="atividade.atividade">
+          <ion-list-header>Tipo</ion-list-header>
+        <ion-item>
+          <ion-label>Trabalho</ion-label>
+          <ion-radio  value="Trabalho"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Prova</ion-label>
+          <ion-radio value="Prova"></ion-radio>
+        </ion-item>
+        </ion-radio-group>
+      </ion-list>
+      
+        <ion-item>
+        <ion-label position="floating">Descricao</ion-label>
+          <ion-textarea  [(ngModel)]="atividade.descricao"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label  >Conteudo</ion-label>
+          <ion-input [(ngModel)]="atividade.conteudo"></ion-input>
+        </ion-item>
+  
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="atividade.data"></ion-datetime>
+      </ion-item>
+    </ion-list>
+  
+    <ion-button color="success" expand="block" (click)="save()">
+      <ion-label>Salvar</ion-label>
+    </ion-button>
+    <ion-button expand="block" color="danger" (click)="delete()">
+      <ion-label >Delete</ion-label>
+    </ion-button>
+      
+  </ion-content>
+  

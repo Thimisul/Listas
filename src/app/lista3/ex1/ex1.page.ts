@@ -30,6 +30,8 @@ export class Ex1Page implements OnInit {
   constructor(public modal: ModalController) { }
 
   ngOnInit() {
+     
+    console.log(this.atividades)
   }
 
   async addAtividade(){
