@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista 2 Exercicio 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngClass]="classe()">
+    <br>
+     <h1 class="ion-text-center">Teste de cor</h1>
+    <br>
+  </div>
+    <ion-button  color="medium" (click)="onClick('red')">Vermelho</ion-button>
+    <ion-button  color="medium" (click)="onClick('blue')">Azul</ion-button>
+    <ion-button  color="medium" (click)="onClick('green')">Verde</ion-button>
+
+</ion-content>
