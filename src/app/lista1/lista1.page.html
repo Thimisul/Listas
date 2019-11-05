@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color= "lista1">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Lista 1 Exercicio 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="custom-skeleton" *ngIf="photos && pessoas" >
+    <ion-item *ngFor="let pessoa of pessoas">
+      <ion-thumbnail slot="start">
+          <img [src]=getSantizeUrl(pessoa.foto)/>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{pessoa.nome}}</h3>
+        <h4>{{pessoa.pais}}</h4>
+        <p>{{pessoa.dataNascimento}}</p>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+  
+</ion-content>
