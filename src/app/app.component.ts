@@ -11,17 +11,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
-    {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+    { title: 'Lista 1',
+      url: '/lista1',
+      icon: 'list',
+      subPages: [
+        { title: 'Exercicio 1', url: '/lista1' },
+        { title: 'Exercicio 2', url: '/lista1/ex2' },
+        { title: 'Exercicio 3', url: '/lista1/ex3' }
+      ]},   
+    { title: 'Lista 2',
+      url: '/lista2/ex1',
+      icon: 'list',
+      subPages: [
+        { title: 'Exercicio 1', url: '/lista2/ex1' },
+        { title: 'Exercicio 2', url: '/lista2/ex2' },
+        { title: 'Exercicio 3', url: '/lista2/ex3' },
+        { title: 'Exercicio 4', url: '/lista2/ex4' },
+    ]},
+    { title: 'Lista 3',
+      url: '/lista3/ex1',
+      icon: 'list'   
     }
   ];
+
 
   constructor(
     private platform: Platform,

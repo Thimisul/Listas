@@ -5,9 +5,9 @@
 :root {
   /** primary **/
   --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-rgb: 56,128,255;
   --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-contrast-rgb: 255,255,255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
 
@@ -74,4 +74,27 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** lista1 **/
+  --ion-color-lista1: #cc6600;
+  --ion-color-lista1-rgb: 56, 128, 255;
+  --ion-color-lista1-contrast: #ffffff;
+  --ion-color-lista1-contrast-rgb: 255, 255, 255;
+  --ion-color-lista1-shade: #3171e0;
+  --ion-color-lista1-tint: #4c8dff;
+
+  
 }
+
+.ion-color-lista1{
+  --ion-color-base: var(--ion-color-lista1);
+  --ion-color-base-rgb: var(--ion-color-lista1-rgb);
+  --ion-color-contrast: var(--ion-color-lista1-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-lista1-contrast-rgb);
+  --ion-color-shade: var(--ion-color-lista1-shade);
+  --ion-color-tint: var(--ion-color-lista1-tint);
+}
+
+$colors: (
+  navbarColor: #009688
+);

@@ -14,7 +14,18 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  { path: 'lista1', loadChildren: './lista1/lista1.module#Lista1PageModule' },
+  { path: 'lista1/ex2', loadChildren: './lista1/ex2/ex2.module#Ex2PageModule' },
+  { path: 'lista1/ex3', loadChildren: './lista1/ex3/ex3.module#Ex3PageModule' },
+  { path: 'lista2/ex1', loadChildren: './lista2/ex1/ex1.module#Ex1PageModule' },
+  { path: 'lista2/ex2', loadChildren: './lista2/ex2/ex2.module#Ex2PageModule' },
+  { path: 'lista2/ex3', loadChildren: './lista2/ex3/ex3.module#Ex3PageModule' },
+  { path: 'lista2/ex4', loadChildren: './lista2/ex4/ex4.module#Ex4PageModule' },
+  { path: 'lista3/ex1', loadChildren: './lista3/ex1/ex1.module#Ex1PageModule' },
+  { path: 'lista3/modalAtividade', loadChildren: './lista3/modal-atividade/modal-atividade.module#ModalAtividadePageModule' },
+  { path: 'ex1', loadChildren: './lista4/ex1/ex1.module#Ex1PageModule' },
+  { path: 'modal-atividade', loadChildren: './lista4/modal-atividade/modal-atividade.module#ModalAtividadePageModule' }
 ];
 
 @NgModule({
