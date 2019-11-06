@@ -35,6 +35,10 @@ export class AppComponent {
     { title: 'Lista 4',
       url: '/lista4/ex1',
       icon: 'list'   
+    },
+    { title: 'Lista 5',
+      url: '/lista5/ex1',
+      icon: 'list'   
     }
   ];
 

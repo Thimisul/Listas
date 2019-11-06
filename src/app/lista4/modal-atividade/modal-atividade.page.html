@@ -5,7 +5,7 @@
           <ion-icon name="close"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>modalAtividade</ion-title>
+      <ion-title>Modal Atividade</ion-title>
     </ion-toolbar>
   </ion-header>
   
@@ -39,10 +39,14 @@
           <ion-input [(ngModel)]="atividade.conteudo"></ion-input>
         </ion-item>
   
-      <ion-item>
-        <ion-label>Date</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="atividade.data"></ion-datetime>
-      </ion-item>
+        <ion-item>
+          <ion-label>Data</ion-label>
+          <ion-datetime  min="2019" max="2025"
+            [dayShortNames]="customDayShortNames"
+            displayFormat="DD MMM, YYYY"
+            monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez"
+            [(ngModel)]="atividade.data"></ion-datetime>
+        </ion-item>
     </ion-list>
   
     <ion-button color="success" expand="block" (click)="save()">

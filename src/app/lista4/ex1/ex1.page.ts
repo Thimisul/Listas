@@ -13,6 +13,15 @@ export class Ex1Page implements OnInit {
 
   atividades = []
 
+  atividade= {
+    id: null, 
+    data:"",
+    atividade: "",
+    descricao: "",
+    conteudo: "",
+    status: "true"
+   }
+   
   constructor(public modal: ModalController, public db:SqlProvider) { 
     this.db.open('atividades.db');
     this.definirTabela();
@@ -23,15 +32,6 @@ export class Ex1Page implements OnInit {
 
   ngOnInit() {
   }
-
-  atividade= {
-    id: null, 
-    data:"",
-    atividade: "",
-    descricao: "",
-    conteudo: "",
-    status: "true"
-   }
 
   async definirTabela(){
     await this.db.createTable('atividades',{

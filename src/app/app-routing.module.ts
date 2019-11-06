@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AutenticacaoGuard } from './guards/autenticacao.guard';
 
 const routes: Routes = [
   {
@@ -25,7 +26,10 @@ const routes: Routes = [
   { path: 'lista3/ex1', loadChildren: './lista3/ex1/ex1.module#Ex1PageModule' },
   { path: 'lista3/modalAtividade', loadChildren: './lista3/modal-atividade/modal-atividade.module#ModalAtividadePageModule' },
   { path: 'lista4/ex1', loadChildren: './lista4/ex1/ex1.module#Ex1PageModule' },
-  { path: 'lista4/modalAtividade', loadChildren: './lista4/modal-atividade/modal-atividade.module#ModalAtividadePageModule' }
+  { path: 'lista4/modalAtividade', loadChildren: './lista4/modal-atividade/modal-atividade.module#ModalAtividadePageModule' },
+  { path: 'lista5/login', loadChildren: './lista5/login/login.module#LoginPageModule' },
+  { path: 'lista5/ex1', loadChildren: './lista5/ex1/ex1.module#Ex1PageModule', canActivate: [AutenticacaoGuard] },
+  { path: 'modal-atividade', loadChildren: './lista5/modal-atividade/modal-atividade.module#ModalAtividadePageModule' }
 ];
 
 @NgModule({

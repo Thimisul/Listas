@@ -13,11 +13,8 @@
 <ion-content>
   <ion-list>
      <div  *ngFor="let atividade of atividades">
-      <ion-button *ngIf="(atividade.status == true) " (click)="openAtividade(atividade.id)" size="large" expand="full">
-        
+      <ion-button  *ngIf="(atividade.status == 'true') " (click)="openAtividade(atividade)" size="large" expand="full">
           <ion-label>{{atividade.data | date: 'dd/MM/yyyy'}}  --  {{atividade.atividade}}</ion-label>
-          
-        
       </ion-button>
     </div>
   </ion-list>
