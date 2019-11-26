@@ -4,12 +4,20 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { TheguardianserviceService } from './services/lista6/theguardianservice.service'
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  result;
+  news;
+  sections = []
+  
   public appPages = [
     { title: 'Lista 1',
       url: '/lista1',
@@ -39,16 +47,35 @@ export class AppComponent {
     { title: 'Lista 5',
       url: '/lista5/ex1',
       icon: 'list'   
-    }
+    },
+    { title: 'Lista 6',
+      url: '/lista6/ex1',
+      icon: 'list',
+      subPages: this.sections}
   ];
 
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private guardianService: TheguardianserviceService
   ) {
     this.initializeApp();
+    this.guardianService.gets('sections?').subscribe( sucesso=>{
+      this.result = sucesso;
+      console.log(this.result)
+      this.news =  this.result.response.results;
+      console.log(this.news)
+      for (let i = 0; i < this.news.length; i++){
+        this.sections.push({
+        title: this.news[i].webTitle,
+        url: "/lista6/ex1",
+        id: this.news[i].id
+        }) 
+      }
+    })
+  
   }
 
   initializeApp() {

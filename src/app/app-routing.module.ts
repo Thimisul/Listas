@@ -29,7 +29,9 @@ const routes: Routes = [
   { path: 'lista4/modalAtividade', loadChildren: './lista4/modal-atividade/modal-atividade.module#ModalAtividadePageModule' },
   { path: 'lista5/login', loadChildren: './lista5/login/login.module#LoginPageModule' },
   { path: 'lista5/ex1', loadChildren: './lista5/ex1/ex1.module#Ex1PageModule', canActivate: [AutenticacaoGuard] },
-  { path: 'modal-atividade', loadChildren: './lista5/modal-atividade/modal-atividade.module#ModalAtividadePageModule' }
+  { path: 'modal-atividade', loadChildren: './lista5/modal-atividade/modal-atividade.module#ModalAtividadePageModule' },
+  { path: 'lista6/ex1', loadChildren: './lista6/ex1/ex1.module#Ex1PageModule' },
+  { path: 'modal-noticia', loadChildren: './lista6/modal-noticia/modal-noticia.module#ModalNoticiaPageModule' }
 ];
 
 @NgModule({
